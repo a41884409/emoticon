@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> 김서연 - attr tab</title>
+    <script src="./script/jquery-1.11.3.js"></script>
+    <script>
+        //이미지 속성 선택하여 텝 메뉴 제작하기
+        $(function(){
+            $(".btn1").on("click",function(){
+                $(".frame img").attr({"src":"./images/01.jpg","alt":"아티제"})
+            });
+            $(".btn2").on("click",function(){
+                $(".frame img").attr({"src":"./images/02.jpg","alt":"황금비율로고"})
+            });
+            $(".btn3").on("click",function(){
+                $(".frame img").attr({"src":"./images/03.jpg","alt":"단발이1"})
+            });
+            $(".btn4").on("click",function(){
+                $(".frame img").attr({"src":"./images/04.jpg","alt":"단발이2"})
+            });
+            $(".btn5").on("click",function(){
+                $(".frame img").attr({"src":"./images/05.jpg","alt":"단발이3"})
+            });
+
+        });
+    </script>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul,li {margin: 0;padding: 0;list-style: none;}
+        body {background: #dedede;}
+        #pf {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+        #pf ul {display: flex; justify-content: space-between;}
+        #pf ul li a {background: #000; font-size: 14px; text-decoration: none;
+        color: #fff; width: 135px;display: block; padding: 10px 0 10px 0;
+        text-align: center; border-top-left-radius:10px ;
+        border-top-right-radius: 10px ;}
+        #pf ul li a:hover {background: #999;}
+        #pf ul li a:focus {background: rgb(179, 175, 175);}
+        #pf .frame img{border: 1px solid #000;}   
+    </style>
+</head>
+<body>
+    <div id="pf">
+        <div class="menu">
+            <!-- ul>li*5>a.btn$>{단발이} -->
+            <ul>
+                <li><a href="#" class="btn1">아티제</a></li>
+                <li><a href="#" class="btn2">황금비율로고</a></li>
+                <li><a href="#" class="btn3">단발이1</a></li>
+                <li><a href="#" class="btn4">단발이2</a></li>
+                <li><a href="#" class="btn5">단발이3</a></li>
+            </ul>
+        </div>
+        <div class="frame">
+            <a href="#"><img src="./images/01.jpg" alt="아티제"></a>
+        </div>
+    </div>
+
+</body>
+</html>
